@@ -4,29 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO优化标签 -->
-    <title>电子化笔记服务 | 专业试卷整理 | 美观工整的学习资料 - Digitize Your Notes</title>
-    <meta name="description" content="专业的电子化笔记服务，提供试卷整理、课程笔记、学习资料数字化。支持数学、物理、编程等各类学科，格式美观工整，便于复习。支持Stripe、PayPal、Zelle付款。">
-    <meta name="keywords" content="电子化笔记,试卷整理,课程笔记,学习资料,数字化笔记,数学笔记,物理公式,编程笔记,Java试卷,算法笔记,论文整理,学习辅导">
+    <!-- 多语言支持 -->
+    <link rel="alternate" hreflang="zh-CN" href="https://wanghaozhengming.github.io/DigitizeYourNotes/" />
+    <link rel="alternate" hreflang="en" href="https://wanghaozhengming.github.io/DigitizeYourNotes/" />
+    <link rel="alternate" hreflang="x-default" href="https://wanghaozhengming.github.io/DigitizeYourNotes/" />
+    
+    <!-- SEO优化标签 - 双语标题 -->
+    <title>Digital Note Services | Professional Note-taking & Exam Paper Organization | 电子化笔记服务</title>
+    <meta name="description" content="Professional digital note-taking services for students and professionals. We digitize handwritten notes, exam papers, and study materials with beautiful formatting. Support for math, physics, programming notes. 专业的电子化笔记服务，提供试卷整理、课程笔记、学习资料数字化。">
+    <meta name="keywords" content="digital notes, note-taking service, exam paper digitization, study materials, handwriting to digital, math notes, physics formulas, programming notes, academic formatting, 电子化笔记, 试卷整理, 课程笔记, 学习资料, 数字化笔记, 数学笔记, 物理公式, 编程笔记, 学术排版">
     <meta name="author" content="Digitize Your Notes">
     <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="language" content="English, Chinese">
+    <meta name="geo.region" content="US">
+    <meta name="geo.placename" content="Global">
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
     <link rel="canonical" href="https://wanghaozhengming.github.io/DigitizeYourNotes/">
     <link rel="manifest" href="/manifest.json">
+    
+    <!-- 预连接优化 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.stripe.com">
+    <link rel="dns-prefetch" href="https://checkout.stripe.com">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wanghaozhengming.github.io/DigitizeYourNotes/">
-    <meta property="og:title" content="电子化笔记服务 | 专业试卷整理 | 美观工整的学习资料">
-    <meta property="og:description" content="专业的电子化笔记服务，提供试卷整理、课程笔记、学习资料数字化。支持数学、物理、编程等各类学科。">
+    <meta property="og:title" content="Digital Note Services | Professional Note-taking & Exam Paper Organization">
+    <meta property="og:description" content="Professional digital note-taking services for students and professionals. We digitize handwritten notes, exam papers, and study materials with beautiful formatting. Support for math, physics, programming notes.">
     <meta property="og:image" content="https://wanghaozhengming.github.io/DigitizeYourNotes/Img/数学.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
     <meta property="og:site_name" content="Digitize Your Notes">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://wanghaozhengming.github.io/DigitizeYourNotes/">
-    <meta property="twitter:title" content="电子化笔记服务 | 专业试卷整理">
-    <meta property="twitter:description" content="专业的电子化笔记服务，提供试卷整理、课程笔记、学习资料数字化。">
+    <meta property="twitter:title" content="Digital Note Services | Professional Note-taking & Exam Paper Organization">
+    <meta property="twitter:description" content="Professional digital note-taking services. We digitize handwritten notes, exam papers, and study materials with beautiful formatting.">
     <meta property="twitter:image" content="https://wanghaozhengming.github.io/DigitizeYourNotes/Img/数学.png">
     
     <!-- 结构化数据 -->
@@ -35,17 +54,51 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Digitize Your Notes",
-      "description": "专业的电子化笔记服务，提供试卷整理、课程笔记、学习资料数字化",
+      "alternateName": "电子化笔记服务",
+      "description": "Professional digital note-taking services for students and professionals. We digitize handwritten notes, exam papers, and study materials with beautiful formatting.",
       "url": "https://wanghaozhengming.github.io/DigitizeYourNotes/",
+      "image": "https://wanghaozhengming.github.io/DigitizeYourNotes/Img/数学.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "haut.cn@icloud.com",
         "contactType": "customer service",
-        "availableLanguage": ["Chinese", "English"]
+        "availableLanguage": ["Chinese", "English", "zh-CN", "en-US"]
       },
-      "serviceType": "Educational Services",
-      "areaServed": "Global",
-      "priceRange": "$$"
+      "serviceType": ["Educational Services", "Document Processing", "Academic Writing Support"],
+      "areaServed": {
+        "@type": "Place",
+        "name": "Global"
+      },
+      "priceRange": "$4-$100",
+      "paymentAccepted": ["Stripe", "PayPal", "Zelle"],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Basic Package",
+          "description": "1-8 pages processing with basic formatting",
+          "price": "4",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer", 
+          "name": "Standard Package",
+          "description": "8-16 pages processing with professional formatting",
+          "price": "20",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium Package", 
+          "description": "9-15 pages full digitization with academic formatting",
+          "price": "60-100",
+          "priceCurrency": "USD"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "50+"
+      }
     }
     </script>
     <style>
