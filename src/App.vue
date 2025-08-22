@@ -445,7 +445,7 @@
               <div class="contact-icon">📱</div>
               <h4>Zelle {{ currentLanguage === 'zh' ? '转账' : 'Transfer' }}</h4>
               <div class="zelle-qr">
-                <img src="/Img/zelle.jpg" alt="Zelle QR Code" />
+                <img :src="getImagePath('zelle.jpg')" alt="Zelle QR Code" />
               </div>
               <small>{{ currentLanguage === 'zh' ? '扫码快速转账，先发货后付款' : 'Scan to transfer quickly, work first pay later' }}</small>
             </div>
@@ -817,74 +817,79 @@ const featuresData = ref({
 })
 
 // 作品展示
+// 图片路径处理函数
+const getImagePath = (imageName) => {
+  return `./Img/${imageName}`;
+};
+
 const portfolioData = ref({
   zh: [
     {
       id: 1,
-      image: '/Img/数学.png',
+      image: getImagePath('数学.png'),
       title: '高等数学笔记',
       category: '课程笔记',
       description: '完整的数学课程笔记，包含定理证明、例题解析和重点标注，格式工整，便于复习。采用专业排版，公式清晰美观。'
     },
     {
       id: 2,
-      image: '/Img/数学公式.png',
+      image: getImagePath('数学公式.png'),
       title: '数学公式整理',
       category: '公式汇总',
       description: '系统整理的数学公式集合，分类明确，排版精美，便于查阅和记忆。包含各种数学符号和复杂公式。'
     },
     {
       id: 3,
-      image: '/Img/物理公式.png',
+      image: getImagePath('物理公式.png'),
       title: '物理公式汇总',
       category: '公式整理',
       description: '物理学重要公式的专业整理，包含力学、电磁学、热学等各个分支的核心公式，排版规范。'
     },
     {
       id: 4,
-      image: '/Img/算法笔记分析.png',
+      image: getImagePath('算法笔记分析.png'),
       title: '算法笔记分析',
       category: '编程笔记',
       description: '算法学习笔记的专业整理，包含算法思路分析、代码实现和复杂度分析，适合程序员学习。'
     },
     {
       id: 5,
-      image: '/Img/Java试卷.png',
+      image: getImagePath('Java试卷.png'),
       title: 'Java程序设计试卷',
       category: '试卷制作',
       description: '专业的Java编程考试试卷，题目分类清晰，代码格式规范，答题空间合理，符合考试标准。'
     },
     {
       id: 6,
-      image: '/Img/英语小作业.png',
+      image: getImagePath('英语小作业.png'),
       title: '英语作业整理',
       category: '作业笔记',
       description: '英语学习作业的规范整理，包含语法练习、词汇总结等内容，排版清晰易读。'
     },
     {
       id: 7,
-      image: '/Img/复杂图表.png',
+      image: getImagePath('复杂图表.png'),
       title: '复杂图表制作',
       category: '图表设计',
       description: '专业的图表设计和数据可视化，包含各种复杂图形、表格和统计图，美观实用。'
     },
     {
       id: 8,
-      image: '/Img/试卷中的复杂图.png',
+      image: getImagePath('试卷中的复杂图.png'),
       title: '试卷图形处理',
       category: '试卷制作',
       description: '试卷中复杂图形的专业处理，包含几何图形、函数图像等，确保图形清晰准确。'
     },
     {
       id: 9,
-      image: '/Img/文字整理.png',
+      image: getImagePath('文字整理.png'),
       title: '文字内容整理',
       category: '文档整理',
       description: '各类文字内容的专业整理和排版，注重版式设计和阅读体验，适合学术文档。'
     },
     {
       id: 10,
-      image: '/Img/长文本，论文整理.png',
+      image: getImagePath('长文本，论文整理.png'),
       title: '论文长文本整理',
       category: '学术论文',
       description: '学术论文和长文本的专业排版，包含标题层次、段落格式、引用规范等，符合学术标准。'
@@ -900,63 +905,63 @@ const portfolioData = ref({
     },
     {
       id: 2,
-      image: '/Img/数学公式.png',
+      image: getImagePath('数学公式.png'),
       title: 'Mathematics Formula Collection',
       category: 'Formula Summary',
       description: 'Systematically organized mathematical formulas with clear categorization and elegant layout, perfect for reference and memorization.'
     },
     {
       id: 3,
-      image: '/Img/物理公式.png',
+      image: getImagePath('物理公式.png'),
       title: 'Physics Formula Compilation',
       category: 'Formula Organization',
       description: 'Professional compilation of important physics formulas covering mechanics, electromagnetism, thermodynamics with standardized formatting.'
     },
     {
       id: 4,
-      image: '/Img/算法笔记分析.png',
+      image: getImagePath('算法笔记分析.png'),
       title: 'Algorithm Notes Analysis',
       category: 'Programming Notes',
       description: 'Professional organization of algorithm learning notes including algorithmic thinking, code implementation, and complexity analysis.'
     },
     {
       id: 5,
-      image: '/Img/Java试卷.png',
+      image: getImagePath('Java试卷.png'),
       title: 'Java Programming Exam Paper',
       category: 'Exam Creation',
       description: 'Professional Java programming exam paper with clear question categorization, standardized code formatting, and appropriate answer space.'
     },
     {
       id: 6,
-      image: '/Img/英语小作业.png',
+      image: getImagePath('英语小作业.png'),
       title: 'English Assignment Organization',
       category: 'Assignment Notes',
       description: 'Standardized organization of English learning assignments including grammar exercises and vocabulary summaries with clear layout.'
     },
     {
       id: 7,
-      image: '/Img/复杂图表.png',
+      image: getImagePath('复杂图表.png'),
       title: 'Complex Chart Design',
       category: 'Chart Design',
       description: 'Professional chart design and data visualization including various complex graphics, tables, and statistical charts.'
     },
     {
       id: 8,
-      image: '/Img/试卷中的复杂图.png',
+      image: getImagePath('试卷中的复杂图.png'),
       title: 'Exam Paper Graphics Processing',
       category: 'Exam Creation',
       description: 'Professional processing of complex graphics in exam papers including geometric figures and function graphs with clarity and accuracy.'
     },
     {
       id: 9,
-      image: '/Img/文字整理.png',
+      image: getImagePath('文字整理.png'),
       title: 'Text Content Organization',
       category: 'Document Organization',
       description: 'Professional organization and layout of various text content with focus on design and reading experience for academic documents.'
     },
     {
       id: 10,
-      image: '/Img/长文本，论文整理.png',
+      image: getImagePath('长文本，论文整理.png'),
       title: 'Academic Paper Long Text',
       category: 'Academic Papers',
       description: 'Professional typesetting of academic papers and long texts including title hierarchy, paragraph formatting, and citation standards.'
